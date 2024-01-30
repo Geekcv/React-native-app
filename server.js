@@ -23,6 +23,13 @@ app.use(morgan("dev"));
 app.use("/api/v1/auth", require("./routes/userRoutes"));
 app.use("/api/v1/post", require("./routes/postRoutes"));
 
+app.get("/", (req, res) => {
+    return res
+      .status(200)
+      .send("<h1>Welcome to mobile Server APP </h1>");
+  });
+
+
 //PORT
 const PORT = process.env.PORT || 8080;
 
